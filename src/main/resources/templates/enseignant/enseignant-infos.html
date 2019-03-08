@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Enseignant</title>
+<link rel="stylesheet" th:href="@{/css/enseignant/enseignant-infos.css}" />
+</head>
+<body>
+	<section>
+		<article>
+			<div>
+				<p th:text="${enseignant.nom}"></p>
+				<p th:text="${enseignant.prenom}"></p>
+
+				<ul>
+					<li th:text="${enseignant.numero_enseignant}"></li>
+					<li th:text="${#dates.format(enseignant.date_naissance, 'dd/MM/yyyy')}"></li>
+					<li th:text="${#dates.format(enseignant.date_embauche, 'dd/MM/yyyy')}"></li>
+					<li th:text="${enseignant.sexe}"></li>
+					<li th:text="${enseignant.grade}"></li>
+				</ul>
+				<img th:src="${enseignant.photo}" />
+			</div>
+		</article>
+		<article>
+			<div>
+				<a th:href="@{supprimer-enseignant(id=${enseignant.id})}">Supprimer</a>
+			</div>
+			<div>
+				<a th:href="@{modifier-enseignant(id=${enseignant.id})}">Modifier</a>
+			</div>
+		</article>
+	</section>
+</body>
+</html>

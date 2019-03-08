@@ -1,0 +1,56 @@
+body{
+	margin:0;
+
+}	
+	
+	.erreur{
+	border: 1px solid red;
+}
+
+.mepLabel{
+	display: inline-block;
+	width: 300px;
+
+}
+
+.mepInput{
+	width: 300px;
+	margin-top: 15px;
+
+}
+/*
+input{
+	border: 0;
+	background-color: transparent;
+}
+*/
+select{
+	border:0;
+	border-bottom: 1px solid black;
+	width: 300px;
+	background: transparent;
+	
+}
+.souligne{
+	border-bottom: 1px solid grey;
+}
+header{
+	width: 250px;
+	height: auto;
+	position : fixed;
+	margin-left: 3%;
+	margin-top: 3%;
+}
+
+article{
+	position: absolute;
+	margin-left: 20%;
+	background-color: white;
+}
+
+.titreCategorie{
+	width: 200px;
+	text-align: right;
+	
+}
+

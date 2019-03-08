@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Les Etudiants</title>
+<link rel="stylesheet" th:href="@{/css/etudiant/etudiants.css}" />
+</head>
+<body>
+	<header>
+		<h1>Les Etudiants</h1>
+
+	</header>
+	<section>
+		<article>
+			<div class="container">
+				<div th:each="etudiants : ${listeEtudiants}" class="blockEtudiant">
+					<p>
+						<a th:href="@{etudiant-infos(id=${etudiants.id})}"> <img
+							th:src="${etudiants.photo}" alt="photo" /></a>
+					</p>
+					<p th:text="${etudiants.nom}"></p>
+					<p th:text="${etudiants.prenom}"></p>
+				</div>
+			</div>
+		</article>
+	</section>
+</body>
+</html>

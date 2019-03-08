@@ -1,0 +1,38 @@
+body{
+	margin:0;
+	background-color: #5cabaf;
+/*	background-image: url("/images/vieuxPapierEnseignant.jpg");*/
+}
+header{
+	width: 250px;
+	height: auto;
+	position : fixed;
+	margin-left: 3%;
+	margin-top: 3%;
+}
+
+
+.container{
+	width: 80%;
+	height: auto;
+	position: absolute;
+	margin-left: 20%;
+	border-left: 3px solid #cebbbfs;
+	background-color: white;
+}
+
+
+.blockEtudiant{
+	display: inline-block;
+	flex-wrap: wrap;
+	text-align: center;
+	width: 200px;
+	height: auto;
+	margin-left: 35px;
+	border-bottom: 2px solid #5cabaf;
+}
+
+img{
+	width: 200px;
+	height: auto;
+}

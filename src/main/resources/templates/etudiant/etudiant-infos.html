@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Etudiant Infos</title>
+<link rel="stylesheet" th:href="@{/css/etudiant/etudiant-infos.css}" />
+</head>
+<body>
+	<section>
+		<article>
+			<div>
+				<p th:text="${etudiant.nom}"></p>
+				<p th:text="${etudiant.prenom}"></p>
+
+				<ul>
+					<li th:text="${etudiant.numero_etudiant}"></li>
+					<li th:text="${#dates.format(etudiant.date_naissance, 'dd/MM/yyyy')}"></li>
+					<li th:text="${etudiant.sexe}"></li>
+				</ul>
+				<img th:src="${etudiant.photo}" />
+			</div>
+		</article>
+		<article>
+			<div>
+				<a th:href="@{supprimer-etudiant(id=${etudiant.id})}">Supprimer</a>
+			</div>
+			<div>
+				<a th:href="@{modifier-etudiant(id=${etudiant.id})}">Modifier</a>
+			</div>
+		</article>
+	</section>
+
+</body>
+</html>

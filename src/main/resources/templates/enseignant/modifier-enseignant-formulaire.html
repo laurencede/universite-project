@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Modifier Fiche Enseignant</title>
+<link rel="stylesheet" th:href="@{/css/enseignant/modifier-enseignant-formulaire.css}"/>
+</head>
+<body>
+	<section>
+		<article>
+			<form id="formulaire" th:action="@{valider-correction-enseignant}" method="post" th:object="${modifEnseignant}">
+	
+				<label>Civilité</label>
+				<input type="radio" id="mr" name="sexe" value="M" th:field="*{sexe}"/>Masculin
+				<input type="radio" id="mme" name="sexe" value="F" th:field="*{sexe}"/>Féminin
+				<br/>
+		
+				<input type="hidden" id="id" name="id" th:field="*{id}" th:value="${modifEnseignant.id}" class="mepInput"/>
+				<br/>
+				<p class="souligne">
+				<label for="nom" class="mepLabel">Nom</label>
+				<input type="text" id="nom" name="nom" th:field="*{nom}" th:value="${modifEnseignant.nom}" class="mepInput"/>
+				<br/>
+				<p>
+				<label for="prenom" class="mepLabel">Prénom</label>
+				<input type="text" id="prenom" name="prenom" th:field="*{prenom}" th:value="${modifEnseignant.prenom}" class="mepInput"/>
+				<br/>
+				<label for="numero_enseignant" class="mepLabel">Numéro de l'enseignant</label>
+				<input type="number" id="numero_enseignant" name="numero_enseignant" th:field="*{numero_enseignant}" th:value="${modifEnseignant.numero_enseignant}" class="mepInput"/>
+				<br/>
+				<label for="date_naissance" class="mepLabel">Date de Naissance</label>
+				<input type="date" id="date_naissance" name="date_naissance" th:field="*{date_naissance}" th:value="${modifEnseignant.date_naissance}"class="mepInput"/>
+				<br/>
+				<label for="grade" class="mepLabel">Grade</label>
+				<select id="grade" name="grade" th:field="*{grade}" th:value="${modifEnseignant.grade}" class="mepInput">
+					<option value="ASS">ASS</option>
+					<option value="MCF">MCF</option>
+					<option value="PR">PR</option>
+				</select>
+				<br/>
+				<label for="date_embauche" class="mepLabel">Date d'embauche</label>
+				<input type="date" id="date_embauche" name="date_embauche" th:field="*{date_embauche}" th:value="${modifEnseignant.date_embauche}" class="mepInput"/>
+				<br/>
+				<label for="photo" class="mepLabel">Photo</label>
+				<input type="text" id="photo" name="photo" th:field="*{photo}" th:value="${modifEnseignant.photo}" class="mepInput"/>
+				<br/>
+				<input type="button" value="Envoyer" class="mepInput" onclick="validerLeFormulaire();"/>
+				<input type="reset" value="Annuler" class="mepInput"/>
+			</form>
+		</article>
+	</section>
+		
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" th:src="@{/js/enseignant/enseignant-modification.js}"></script>
+</body>
+</html>
